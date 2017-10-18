@@ -18,4 +18,4 @@ class PolibiuszTest {
         assertEquals("rocky", P.decrypt(crypted));
     }
 
-}// test
+}// testkk
