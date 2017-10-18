@@ -3,7 +3,9 @@ package lab2.PrDom;
 public class Test {
 
     public static void main(String[] args) {
-        CwBD C = new CwBD("C:/hasla.txt");
+        CwDB C = new CwDB("C:/hasla.txt");
+        C.add("cegła", "podstawowy materiał budowlany");
+        C.remove("cegła");
     }
 }
 
