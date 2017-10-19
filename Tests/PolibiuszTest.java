@@ -17,5 +17,4 @@ class PolibiuszTest {
         String crypted = "42 34 13 25 54 ";
         assertEquals("rocky", P.decrypt(crypted));
     }
-
-}// testkka
+}
