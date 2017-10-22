@@ -2,7 +2,9 @@ package lab3.zad4;
 
 public class trojkat extends Shape{
 
-    public trojkat(){
+    public trojkat(int a, int h){
+
+        this.pole = (int) 0.5*a*h;
         name = "trojkat";
     }
 
@@ -11,4 +13,8 @@ public class trojkat extends Shape{
             System.out.println("Rysuje trójkąt");
         }
     }
+    public int pole(){
+        return pole ;
+    }
+
 }

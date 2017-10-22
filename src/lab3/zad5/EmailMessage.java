@@ -53,7 +53,6 @@ public class EmailMessage {
                         return new PasswordAuthentication(username, password);
                     }
                 });
-
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
