@@ -1,6 +1,9 @@
 package lab1.zad7;
 
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Matrix {
     int rows, columns;
@@ -15,8 +18,30 @@ public class Matrix {
         rows = _rows; columns = _columns;
         M = new int[rows][columns];
     }
+    public Matrix(int rows, int columns, Scanner in) throws IOException{
+        this(rows,columns);
 
-    public Matrix add(Matrix _M){
+        for (int r=0;r<rows;++r){
+            for (int c=0;c<columns;++c){
+                M[r][c] = in.nextInt();
+                System.out.println(M[r][c]);
+            }
+            if (in.hasNextLine())
+                in.nextLine();
+        }
+        in.close();
+    }
+
+
+
+
+
+
+    public Matrix add(Matrix _M) throws MatrixDimensionsException {
+        if (this.getColumns() != _M.getColumns() &&
+                this.getRows() != _M.getRows()) {
+            throw new MatrixDimensionsException("Błędny wymiar macierzy");
+        }
         Matrix M_new = new Matrix(rows,columns);
         for (int i=0;i<rows;++i){
             for (int j=0;j<columns;++j){
@@ -26,7 +51,11 @@ public class Matrix {
         return M_new;
     }
 
-    public Matrix sub(Matrix _M){
+    public Matrix sub(Matrix _M) throws MatrixDimensionsException{
+        if (this.getColumns() != _M.getColumns() &&
+                this.getRows() != _M.getRows()) {
+            throw new MatrixDimensionsException("Błędny wymiar macierzy");
+        }
         Matrix M_new = new Matrix(rows,columns);
         for (int i=0;i<rows;++i){
             for (int j=0;j<columns;++j){
@@ -36,7 +65,10 @@ public class Matrix {
         return M_new;
     }
 
-    public Matrix mul(Matrix _M){
+    public Matrix mul(Matrix _M) throws MatrixDimensionsException{
+        if (this.getColumns() != _M.getRows()) {
+            throw new MatrixDimensionsException("Błędny wymiar macierzy");
+        }
         Matrix M_new = new Matrix(rows,columns);
         int sum;
         for (int i=0;i<rows;++i){
