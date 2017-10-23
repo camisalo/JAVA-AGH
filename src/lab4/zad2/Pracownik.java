@@ -6,6 +6,9 @@ abstract class Pracownik {
     PESEL pesel;
     double wynagrodzenieBrutto;
 
-    abstract double obliczWynagrodzenieNeto();
+    abstract double obliczWynagrodzenieNetto();
+    abstract double pobierzWynagrodzenieBrutto();
+    abstract void zmienwynagrodzenie(double wynagrodzenie);
+
 
 }

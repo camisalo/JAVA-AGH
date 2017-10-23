@@ -5,14 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class PESEL {
-    private String Pesel;
-    public void LoadPESEL(){
-        try {
-            System.out.print("Podaj swój pesel: ");
-            InputStreamReader reader = new InputStreamReader(System.in);
-            BufferedReader buffer = new BufferedReader(reader);
-            Pesel = buffer.readLine();
-        }catch(IOException e){e.printStackTrace();}
+    private String Pesel = "11111111111";
+    public void LoadPESEL(String p){
+        Pesel = p;
     }
 
     public boolean check(){
@@ -28,6 +23,9 @@ public class PESEL {
         } else{
             return false;
         }
+    }
+    public String getPesel(){
+        return Pesel;
     }
 
 }

@@ -9,6 +9,8 @@ public class Matrix {
     int rows, columns;
     public int[][] M;
 
+    public Matrix(){}
+
     public Matrix(int _rows, int _columns, int[][] A){
         this(_rows,_columns);
         M = Arrays.copyOf(A, A.length);
