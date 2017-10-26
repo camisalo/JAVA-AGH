@@ -32,7 +32,7 @@ public class MicroDVD {
         frametomove = (int) (0.001 * delay * fps);
     }
 
-    private void moveFrame() throws WrongFrame, WrongFrameFormat, IOException{
+    private void moveFrame() throws IOException, WrongFrame, WrongFrameFormat, IOException{
         Pattern p = Pattern.compile("(\\{[0-9]{1,}\\})(\\{[0-9]{1,}\\})");
         String line;
         while (source.hasNext()){

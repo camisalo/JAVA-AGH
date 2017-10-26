@@ -1,4 +1,4 @@
-{328}{12}/Na wysokości 600 kilometrów temperatura waha się|/między 126 a -100 stopniami Celsjusza.
+{328}{400}/Na wysokości 600 kilometrów temperatura waha się|/między 126 a -100 stopniami Celsjusza.
 {544}{681}/Dźwięk się nie niesie.|/Nie ma ciśnienia ani tlenu.
 {755}{858}/Życie w kosmosie jest niemożliwe.
 {875}{949}GRAWITACJA
