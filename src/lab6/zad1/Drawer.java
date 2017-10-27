@@ -1,4 +1,4 @@
-package lab6.przyklad;/*
+package lab6.zad1;/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -11,7 +11,6 @@ package lab6.przyklad;/*
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Drawer extends JPanel{

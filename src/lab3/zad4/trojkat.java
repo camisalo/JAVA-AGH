@@ -1,5 +1,7 @@
 package lab3.zad4;
 
+import java.awt.*;
+
 public class trojkat extends Shape{
 
     public trojkat(int a, int h){
@@ -17,4 +19,9 @@ public class trojkat extends Shape{
         return pole ;
     }
 
+
+    @Override
+    public void draw(Graphics g){
+
+    }
 }

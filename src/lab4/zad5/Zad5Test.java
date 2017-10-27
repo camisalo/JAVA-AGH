@@ -15,29 +15,30 @@ public class Zad5Test {
                     "\n3. deszyfruj ROT11." +
                     "\n4. deszyfruj Polibiusem." +
                     "\n5. zakoncz.");
+            System.out.println(args[0]);
             i = in.nextInt();
             switch (i) {
                 case 1:
-                    Cryptographer.cryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\FiletoCrypt",
-                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\CryptedR11",
+                    Cryptographer.cryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[0],
+                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[1],
                             R11);
                     System.out.println("Zrobione");
                     break;
                 case 2:
-                    Cryptographer.cryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\FiletoCrypt",
-                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\CryptedPolibiusz",
+                    Cryptographer.cryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[0],
+                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[2],
                             polibiusz);
                     System.out.println("Zrobione");
                     break;
                 case 3:
-                    Cryptographer.decryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\CryptedR11",
-                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\DecrypredR11",
+                    Cryptographer.decryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[1],
+                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[3],
                             R11);
                     System.out.println("Zrobione");
                     break;
                 case 4:
-                    Cryptographer.decryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\CryptedPolibiusz",
-                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\DecryptedPolibiusz",
+                    Cryptographer.decryptfile("C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[2],
+                            "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab4\\zad5\\" + args[4],
                             polibiusz);
                     System.out.println("Zrobione");
                     break;

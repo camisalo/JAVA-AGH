@@ -16,8 +16,11 @@ class MicroDVDTest {
         String in = "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab5\\zad3\\Subtitles.txt";
         String out = "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab5\\zad3\\Subtitles_delay";
         String out_test = "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\Tests\\lab5\\Subtitles_Test";
-        M.delay(in, out, 500, 30);
-
+        try {
+            M.delay(in, out, 500, 30);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
         try {
             Scanner poprawne = new Scanner(Paths.get(out_test));
             Scanner sprawdzane = new Scanner(Paths.get(out));
@@ -40,8 +43,11 @@ class MicroDVDTest {
         String in = "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab5\\zad3\\Subtitles.txt";
         String out = "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\src\\lab5\\zad3\\Subtitles_delay";
         String out_test = "C:\\Users\\konra\\IdeaProjects\\JAVA-AGH\\Tests\\lab5\\Subtitles_Test";
-        M.delay(in, out, 500, 30);
-        assertEquals(15, M.getFrameToMove());
+        try{
+            M.delay(in, out, 500, 30);
+        }catch (IOException e){
+            e.printStackTrace();
+        }assertEquals(15, M.getFrameToMove());
     }
 
 

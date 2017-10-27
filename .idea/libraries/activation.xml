@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://C:/Java_Biblioteki/jaf-1.1.1/activation.jar!/" />
       <root url="jar://C:/Java_Biblioteki/javax.mail.jar!/" />
+      <root url="jar://C:/JavaClass/activation.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

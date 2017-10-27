@@ -12,7 +12,7 @@ public class MicroDVD {
     private Scanner source;
     private PrintWriter out;
     private int frametomove;
-    public void delay(String in, String out, int delay, int fps){
+    public void delay(String in, String out, int delay, int fps) throws IOException, WrongFrame, WrongFrameFormat{
         calcFrameToMove(delay,fps);
         try{
             source = new Scanner(Paths.get(in));
@@ -21,6 +21,7 @@ public class MicroDVD {
         }
         catch (IOException e){
             e.printStackTrace();
+            throw e;
         }
         finally {
             source.close();
@@ -32,7 +33,7 @@ public class MicroDVD {
         frametomove = (int) (0.001 * delay * fps);
     }
 
-    private void moveFrame() throws IOException, WrongFrame, WrongFrameFormat, IOException{
+    private void moveFrame() throws IOException, WrongFrame, WrongFrameFormat{
         Pattern p = Pattern.compile("(\\{[0-9]{1,}\\})(\\{[0-9]{1,}\\})");
         String line;
         while (source.hasNext()){

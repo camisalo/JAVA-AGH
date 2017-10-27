@@ -1,5 +1,7 @@
 package lab3.zad4;
 
+import java.awt.*;
+
 public class Prostokat extends Shape{
 
     public Prostokat(int a, int b){
@@ -15,6 +17,11 @@ public class Prostokat extends Shape{
             System.out.println("|          |");
         }
         System.out.println("----------");
+    }
+
+    @Override
+    public void draw(Graphics g){
+
     }
 
     public int pole(){
