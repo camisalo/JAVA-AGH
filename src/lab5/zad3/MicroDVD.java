@@ -29,6 +29,7 @@ public class MicroDVD {
         }
     }
 
+
     private void calcFrameToMove(int delay, int fps) {
         frametomove = (int) (0.001 * delay * fps);
     }

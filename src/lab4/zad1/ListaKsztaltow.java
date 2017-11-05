@@ -14,7 +14,7 @@ import java.util.LinkedList;
 import lab3.zad4.Shape;
 
 public class ListaKsztaltow {
-    private LinkedList<Shape> lista = new LinkedList<>();
+    public LinkedList<Shape> lista = new LinkedList<>();
 
     public void add(Shape S){
         lista.add(S);
@@ -28,6 +28,13 @@ public class ListaKsztaltow {
                 return 0;
             }
         });
+    }
+    public void wczytajKsztalty(){
+        lista.add(new Kwadrat(100,200,350));
+        lista.add(new Prostokat(300,350, 200, 300));
+        lista.add(new trojkat(200,300,400,250));
+        lista.add(new Prostokat(600,500, 400, 100));
+        lista.add(new Kwadrat(700,200,150));
     }
 
 

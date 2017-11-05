@@ -1,4 +1,4 @@
-package lab6.zad1;
+package lab6.przyklad;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

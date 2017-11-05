@@ -1,4 +1,4 @@
-package lab6.zad1;/*
+package lab6.przyklad;/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
