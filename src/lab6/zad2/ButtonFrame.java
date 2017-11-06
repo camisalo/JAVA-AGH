@@ -9,13 +9,13 @@ import java.awt.event.ActionListener;
 public class ButtonFrame extends JFrame{
     private JPanel panel = new JPanel();
 
-    private JTextField A = new JTextField("0");
-    private JTextField B = new JTextField("0");
-    private JTextField C = new JTextField("0");
+    private JTextField A = new JTextField("0.1");
+    private JTextField B = new JTextField("2");
+    private JTextField C = new JTextField("1");
     private JTextField D = new JTextField("0");
-    private JTextField S = new JTextField("0");
-    private JTextField E = new JTextField("0");
-    private JTextField div = new JTextField("10");
+    private JTextField S = new JTextField("-20");
+    private JTextField E = new JTextField("5");
+    private JTextField div = new JTextField("100");
 
     public ButtonFrame(){
         JButton PlotButton = new JButton("Rysuj");
@@ -38,7 +38,7 @@ public class ButtonFrame extends JFrame{
                     frame.add(wykres);
 
 
-                    frame.setSize(1000,600);
+                    frame.setSize(1015,640);
 
                     frame.setTitle("Wykresy wielomianów");
                     frame.setVisible(true);
