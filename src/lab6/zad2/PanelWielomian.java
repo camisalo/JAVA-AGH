@@ -28,12 +28,12 @@ public class PanelWielomian extends JPanel {
         NumberFormat nf = NumberFormat.getInstance();
         nf.setMaximumFractionDigits(2);
 
-        g2.setFont(new Font("TimesRoman",Font.PLAIN,10));
+        g2.setFont(new Font("TimesRoman",Font.PLAIN,12));
         g2.setColor(Color.GRAY);
         String osie;
         for (int i=0;i<11;++i){
             osie = nf.format(S + i*(Math.abs(E-S)/10));
-            g2.drawString(osie,i*100,12);
+            g2.drawString(osie,5 + i*100,12);
             g2.draw(new Line2D.Double(i*100,0,i*100,600));
 
             osie = nf.format(MAX - i*(Math.abs(MAX-MIN)/10));
@@ -41,10 +41,11 @@ public class PanelWielomian extends JPanel {
             g2.draw(new Line2D.Double(0,i*60,1000,i*60));
         }
 
-        g2.setFont(new Font("TimesRoman",Font.PLAIN,25));
+        g2.setFont(new Font("TimesRoman",Font.BOLD,25));
 
-        g2.drawString("MAX: " + nf.format(MAX_X) + " , " + nf.format(MAX),750,500);
-        g2.drawString("MIN: " + nf.format(MIN_X) + " , " + nf.format(MIN),750,525);
+        nf.setMaximumFractionDigits(5);
+        g2.drawString("MAX: [" + nf.format(MAX_X) + " , " + nf.format(MAX) + "]",700,500);
+        g2.drawString("MIN: [" + nf.format(MIN_X) + " , " + nf.format(MIN) + "]",700,525);
 
         // Rysowanie Wielomianu
         double P1, P2;

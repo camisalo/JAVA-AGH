@@ -37,7 +37,6 @@ public class ButtonFrame extends JFrame{
                             Integer.parseInt(div.getText()));
                     frame.add(wykres);
 
-
                     frame.setSize(1015,640);
 
                     frame.setTitle("Wykresy wielomianów");
