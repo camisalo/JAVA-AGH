@@ -21,5 +21,6 @@
     </orderEntry>
     <orderEntry type="library" name="javax.mail" level="project" />
     <orderEntry type="library" name="activation1" level="project" />
+    <orderEntry type="library" name="io.indico:io.indico:3.16.0" level="project" />
   </component>
 </module>
