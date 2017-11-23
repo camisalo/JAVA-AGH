@@ -23,5 +23,8 @@
     <orderEntry type="library" name="activation1" level="project" />
     <orderEntry type="library" name="io.indico:io.indico:3.16.0" level="project" />
     <orderEntry type="library" name="io.indico:io.indico:3.16.01" level="project" />
+    <orderEntry type="library" name="com.thoughtworks.binding:fxml_sjs0.6_2.12:11.0.0-M5" level="project" />
+    <orderEntry type="library" name="api" level="project" />
+    <orderEntry type="library" name="ant-javafx" level="project" />
   </component>
 </module>

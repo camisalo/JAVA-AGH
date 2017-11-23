@@ -1,23 +1,24 @@
-package lab5.zad6;
+package lab6.zad3;
 
-import io.indico.*;
+import io.indico.Indico;
 import io.indico.api.results.IndicoResult;
 import io.indico.api.utils.IndicoException;
 import org.apache.commons.io.FileUtils;
-
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.*;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Map;
 
-public class SegregowanieZdjec {
+public class Segregowanie {
 
 
-    public SegregowanieZdjec(String patch) throws IndicoException, IOException {
-
+    public Segregowanie(String patch) throws IndicoException, IOException {
+        
         Indico indico = new Indico("a16f7a067abf922404162ad6a6064bfa");
 
         String[] extension = {"jpg"}; int licznik=0;
