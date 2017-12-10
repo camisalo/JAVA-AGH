@@ -4,7 +4,7 @@ import lab1.zad6.PESEL;
 
 public class PracownikEtatowy extends Pracownik {
 
-    PracownikEtatowy(String p){
+    public PracownikEtatowy(String p){
         pesel = new PESEL();
         pesel.LoadPESEL(p);
     }

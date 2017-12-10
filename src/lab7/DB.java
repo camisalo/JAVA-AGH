@@ -27,6 +27,7 @@ public class DB{
                         "camisalo", "8hkat8iDCcNjVjFM");
             }catch (SQLException ex){}
             if (i==3 && conn==null)
+
                 throw new ConnectException();
         }
 

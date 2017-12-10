@@ -30,7 +30,6 @@ public class BooksController implements Initializable{
     private DB db = new DB();
 
     public void SearchInDB(){
-        System.out.println("Wcisnołeś :D");
 
         ObservableList<String> lista = FXCollections.observableArrayList();;
 
