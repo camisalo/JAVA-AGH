@@ -1,3 +1,5 @@
+package lab9.zad1;
+
 import java.io.*;
 import java.net.*;
 
