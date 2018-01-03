@@ -9,9 +9,14 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.regex.Pattern;
 
+import static lab9.zad2.Levenshtein.levenshtein;
+
 public class ServerSzymon {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
+        String loginpassword = "konrad;maniek";
+        String ID="";
+        boolean online = false;
 
         try{
             serverSocket = new ServerSocket(5000);
@@ -33,22 +38,42 @@ public class ServerSzymon {
                 new InputStreamReader(
                         clientSocket.getInputStream()));
         String inputLine;
-
+        System.out.println("elo");
+        int lev;
         while ((inputLine = in.readLine()) != null) {
-            if (Pattern.compile("LOGIN").matcher(inputLine).find()){
-                String login =
-                String paswd = inputLine.substring(Pattern.compile("[A-Z][a-z]{1,10}+;").matcher(inputLine).start(),
-                        Pattern.compile("[A-Z][a-z]{1,10}+;").matcher(inputLine).end()) // cos nie tak
-            } else if (Pattern.compile("LOGOUT").matcher(inputLine).find()){
-                System.out.println("Logout!!!");
-            } else if (Pattern.compile("LS").matcher(inputLine).find()){
-                System.out.println("LS!!");
-            } else if (Pattern.compile("GET").matcher(inputLine).find()){
-                System.out.println("GET!!!");
-            } else {
-                System.out.println("Unknown command");
+            // LOGOWANIE do serwera
+            if (!online) {
+                if ((lev = levenshtein(loginpassword, inputLine)) == 0) {
+                    ID = "1234567890";
+                    online = true;
+                    out.println(ID);
+                } else {
+                    out.println(lev);
+                }
             }
 
+            // Obsługa komend po zalogowaniu
+            else if (online) {
+                String[] splitedArray = inputLine.split(" ");
+                if (splitedArray.length == 2) {
+                    if (splitedArray[0].equals("LOGOUT") && splitedArray[1].equals(ID)) {
+                        out.println("LOGOUT");
+                        break;
+                    } else if (splitedArray[0].equals("LS") && splitedArray[1].equals(ID)) {
+                        out.println("plik1;plik2;plik3");
+                    } else{
+                        out.println("nieznana komenda");
+                    }
+                } else if (splitedArray.length == 3){
+                    if (splitedArray[0].equals("GET") && splitedArray[1].equals(ID)) {
+                        out.println("Zawartość pliku: " + splitedArray[2]);
+                    } else {
+                        out.println("nieznana komenda");
+                    }
+                } else {
+                    out.println("nieznana komenda");
+                }
+            }
         }
         out.close();
         in.close();

@@ -24,5 +24,6 @@
     <orderEntry type="library" name="io.indico:io.indico:3.16.01" level="project" />
     <orderEntry type="library" name="mysql:mysql-connector-java:5.1.45" level="project" />
     <orderEntry type="library" name="org.postgresql:postgresql:42.1.4" level="project" />
+    <orderEntry type="library" name="javax.mail:javax.mail-api:1.6.0" level="project" />
   </component>
 </module>

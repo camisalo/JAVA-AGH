@@ -16,13 +16,13 @@ public class ClientSzymon {
         Socket echoSocket = null;
         PrintWriter out = null;
         BufferedReader in = null;
-
+        String ID;
 
 
 
 
         try {
-            echoSocket = new Socket(InetAddress.getByName("localhost"), 5000);
+            echoSocket = new Socket("localhost", 5000);
             out = new PrintWriter(echoSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(
                     echoSocket.getInputStream()));
@@ -43,7 +43,7 @@ public class ClientSzymon {
         System.out.println("Type a command: ");
         while ((userInput = stdIn.readLine()) != null) {
             out.println(userInput);
-            System.out.println("siema");
+            System.out.println(in.readLine());
         }
 
         out.close();
